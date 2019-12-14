@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            width: 856px;
+            height: 480px;
+        }
+        #c3{
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 1;
+        }
+        #v3{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>弹幕练习</h2>
+    <div class="container">
+        <canvas id="c3" width="856" height="480"></canvas>
+        <video id="v3" src="res/x.mp4"></video>
+    </div>
+    <div class="user">
+        <select id="inputcolor">
+            <option value="#f00">--请选择--</option>
+            <option value="#0f0">--绿色--</option>
+            <option value="#00f">--蓝色--</option>
+        </select>
+        <select id="inputfont">
+            <option value="12px">--请选择--</option>
+            <option value="22px">--中号--</option>
+            <option value="32px">--大号--</option>
+        </select>
+        <input type="text" id="inputmsg" placeholder="各抒己见">
+        <input type="button" value="发送" id="inputbtn">
+        <input type="button" value="播放/暂停" id="inputplay">
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/msg.js"></script>
+</body>
+</html>
